@@ -6,7 +6,7 @@
 AgamejamGameMode::AgamejamGameMode()
 {
 	// Set default pawn class to our Blueprint character.
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/StarterProject/Characters/PlayerCharacter_BP"));
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/BluePrint/BP_BaseCar"));
 	static ConstructorHelpers::FClassFinder<APawn> SimulatedPawnBPClass(TEXT("/Game/StarterProject/Characters/SimulatedPlayers/SimulatedPlayerCharacter_BP"));
 
 	if (PlayerPawnBPClass.Class != NULL)
@@ -17,7 +17,7 @@ AgamejamGameMode::AgamejamGameMode()
 	{
 		SimulatedPawnClass = SimulatedPawnBPClass.Class;
 	}
-	
+
 	// Seamless Travel is not currently supported in SpatialOS [UNR-897]
 	bUseSeamlessTravel = false;
 }

@@ -6,7 +6,7 @@
 AgamejamGameMode::AgamejamGameMode()
 {
 	// Set default pawn class to our Blueprint character.
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/BluePrint/BP_BaseCar"));
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/VehicleVarietyPack/Blueprints/SportsCar/BP_SportsCar"));
 	static ConstructorHelpers::FClassFinder<APawn> SimulatedPawnBPClass(TEXT("/Game/StarterProject/Characters/SimulatedPlayers/SimulatedPlayerCharacter_BP"));
 
 	if (PlayerPawnBPClass.Class != NULL)

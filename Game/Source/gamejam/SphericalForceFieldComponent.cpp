@@ -15,7 +15,7 @@ void USphericalForceFieldComponent::BeginPlay()
 
 float USphericalForceFieldComponent::CalculateForceStrength(float DistanceSquared, float OtherMass) const
 {
-    float InvDistanceSquared = ScalarReciprocal(ScalarRegister(DistanceSquared)).Value.m128_f32[0];
+    float InvDistanceSquared = 1.f / DistanceSquared;
     float Sign = (ForceDirection == EDirection::Inward) ? -1 : 1;
     return Sign * ForceConstant * ForceMultiplier * OtherMass * InvDistanceSquared;
 }
